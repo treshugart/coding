@@ -6,16 +6,16 @@ export interface SinglyLinkedNode extends LinkedNode {
 
 export class SinglyLinkedList {
   head: SinglyLinkedNode;
-  last: SinglyLinkedNode;
+  tail: SinglyLinkedNode;
 
   push (value: any): SinglyLinkedNode {
     const node: LinkedNode = { value };
     if (this.head) {
-      this.last.next = node;
+      this.tail.next = node;
     } else {
       this.head = node;
     }
-    this.last = node;
+    this.tail = node;
     return node;
   }
 }

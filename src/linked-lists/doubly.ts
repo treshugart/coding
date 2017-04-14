@@ -8,12 +8,12 @@ export interface DoublyLinkedNode extends SinglyLinkedNode {
 
 export class DoublyLinkedList extends SinglyLinkedList {
   head: DoublyLinkedNode;
-  last: DoublyLinkedNode;
+  tail: DoublyLinkedNode;
 
   push (value: any): DoublyLinkedNode {
-    const { last } = this;
+    const { tail } = this;
     const node: DoublyLinkedNode = super.push(value);
-    node.prev = last;
+    node.prev = tail;
     return node;
   }
 }
