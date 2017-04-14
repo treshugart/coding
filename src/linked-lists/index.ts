@@ -16,4 +16,4 @@ dll.push(1);
 dll.push(2);
 pretty(dll.head);
 dll.remove(1);
-pretty(sll.head);
+pretty(dll.head);

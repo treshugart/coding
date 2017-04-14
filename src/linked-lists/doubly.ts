@@ -16,4 +16,10 @@ export class DoublyLinkedList extends SinglyLinkedList {
     node.prev = tail;
     return node;
   }
+
+  remove (value: any): DoublyLinkedNode {
+    const node: DoublyLinkedNode = super.remove(value);
+    node.next.prev = node.prev;
+    return node;
+  }
 }

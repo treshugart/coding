@@ -1,4 +1,4 @@
-const cache = [];
+let cache = [];
 function ignoreCircularReferences (key, value) {
   if (typeof value === 'object' && value !== null) {
     if (cache.indexOf(value) !== -1) {
@@ -11,4 +11,5 @@ function ignoreCircularReferences (key, value) {
 
 export function pretty (value: any, indent: number = 2) {
   console.log(JSON.stringify(value, ignoreCircularReferences, indent));
+  cache = [];
 }
