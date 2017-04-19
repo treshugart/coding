@@ -1,3 +1,5 @@
+// @flow
+
 import { LinkedNode } from './util';
 
 export interface SinglyLinkedNode extends LinkedNode {
@@ -37,5 +39,21 @@ export class SinglyLinkedList {
       prev.next = curr.next;
     }
     return curr;
+  }
+
+  reverse (): SinglyLinkedList {
+    const head = this.head;
+    let curr = this.head;
+    let temp;
+    while (curr) {
+      temp = curr.next;
+      // curr.next = curr.prev;
+      // curr.prev = temp;
+      if (!temp) {
+        this.head = curr;
+      }
+      curr = temp;
+    }
+    return this;
   }
 }

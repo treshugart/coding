@@ -1,3 +1,5 @@
+// @flow
+
 let cache = [];
 function ignoreCircularReferences (key, value) {
   if (typeof value === 'object' && value !== null) {

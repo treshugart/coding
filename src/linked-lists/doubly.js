@@ -1,3 +1,5 @@
+// @flow
+
 import { LinkedNode } from './util';
 import { SinglyLinkedList, SinglyLinkedNode } from './singly';
 
