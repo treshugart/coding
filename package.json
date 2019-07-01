@@ -2,5 +2,8 @@
   "dependencies": {
     "ts-node": "^3.0.2",
     "typescript": "^2.2.2"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
